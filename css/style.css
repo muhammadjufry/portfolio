@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.scrollOff {
+  overflow-y: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Design navbar start here */
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  z-index: 99;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: rgba(230, 230, 230, 0.5);
+  box-shadow: 0 3px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(16px);
+}
+
+/* Design Logo */
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  text-shadow: 4px 6px 10px rgb(0 0 0 / 30%);
+  letter-spacing: 1.25px;
+  background: linear-gradient(
+    to right,
+    rgba(107, 105, 105, 0.79) 0%,
+    #1f083cbf 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Design the menu list */
+ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: rgb(71, 85, 105);
+  font-weight: 500;
+  font-size: 14.5px;
+}
+
+/* Hide the menu toggle */
+.menuToggle {
+  display: none;
+}
+
+/* Design navbar end here */
+
+/* Design the banner section start here */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem 5rem;
+  margin-top: 81px;
+}
+
+/* Design banner content */
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Design hi banner text */
+.hiBannerText {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+}
+
+/* Design the username of the banner section */
+.bannerUsername {
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: #0f127a;
+  line-height: 1.625;
+}
+
+/* Design the first content of the banner username */
+.bannerUsername > .usernameContentOne {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Design banner typing write effect */
+.bannerTypeWrittingEffect {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+
+.blinkingCursor {
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-name: blinkingCursor;
+  color: inherit;
+  font: inherit;
+  font-size: 1.125rem;
+  left: 3px;
+  line-height: inherit;
+  opacity: 1;
+  position: relative;
+  top: 0;
+}
+
+@keyframes blinkingCursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Design banner buttons */
+.bannerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.bannerButtons > a {
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1rem 1.75rem;
+  background-color: #1e293b;
+  color: white;
+  border-radius: 9999px;
+}
+
+/* Design the profile picture */
+.bannerPicture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+/* Design the banner section end here */
+
+/* Design projects section start here */
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 3.5rem;
+  color: #0f127a;
+}
+
+/* Design the projects title */
+.projects h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Design the projects list */
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+/* Design the project card */
+.project {
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1290px;
+  height: 100%;
+  gap: 2rem;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 30px rgb(0 0 0 / 20%);
+}
+
+/* Design the project card image */
+.projectPicture {
+  width: 500px;
+  height: 350px;
+  border-radius: 0.75rem;
+}
+
+.projectPictureMobile {
+  display: none;
+  width: 100% auto;
+  height: 100% auto;
+  border-radius: 0.75rem;
+}
+
+.projectPicture.orderEnd {
+  order: 1;
+}
+
+/* Design project info */
+.projectInfo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Design the project title */
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: #0f127a;
+}
+
+/* Design the project description */
+.projectDescription {
+  max-width: 800px;
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+  color: #0f127a;
+}
+
+/* Design project technologies */
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projectTechnologies > li {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+/* Design the project buttons */
+.projectButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1rem;
+}
+
+.projectButton {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  border: 2px solid #1e293b;
+  color: #1e293b;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.9rem 1.3rem;
+}
+/* Design projects section end here */
+
+/* Design about start here */
+
+.about {
+  padding: 4rem 4rem;
+  color: #0f127a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Design the about title */
+.about h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+/* Design about content */
+.aboutContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Design about picture */
+.aboutPicture {
+  border-radius: 100%;
+}
+
+/* Design about info */
+.aboutInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Design about info description */
+.aboutInfoDesc {
+  line-height: 2.5rem;
+  max-width: 1000px;
+}
+
+/* Design about info link*/
+
+.aboutInfoDescLink {
+  color: green;
+}
+
+/* Design the about info resume button */
+.aboutButton {
+  width: fit-content;
+  gap: 1rem;
+  border: 2px solid #1e293b;
+  color: #1e293b;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.9rem 1.3rem;
+}
+
+/* Design about end here */
+
+/* Design contact section start here */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 3px solid #1e293b;
+}
+
+/* Design the contact content */
+.contactContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Design the contact title */
+.contactContent h2 {
+  color: #0f127a;
+  font-size: 2rem;
+}
+
+/* Design the contact form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Design the contact form label */
+.contactForm label {
+  color: #0f127a;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  margin-top: 1rem;
+}
+
+/* Design the contact form input */
+.contactForm input,
+.contactForm textarea {
+  margin-top: 1rem;
+  border: 2px solid #1e293bd3;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #1e293bd3;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 32px;
+  letter-spacing: 1.25px;
+}
+
+/* Design the contact form button */
+.contactForm button {
+  width: fit-content;
+  background-color: transparent;
+  border: 2px solid #1e293bd3;
+  font-size: 16px;
+  color: #1e293bd3;
+  margin-top: 2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.9rem 1.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contactForm button:hover {
+  background-color: #1e293bd3;
+  color: white;
+}
+
+/* Design contact section end here */
+
+/* Responsive web design start here */
+@media screen and (max-width: 992px) {
+  /* Responsive nav start here */
+  nav {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    position: absolute;
+    display: none;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    background-color: #1e293b;
+    color: white;
+    padding: 2rem;
+    align-items: flex-start;
+    width: 100%;
+    height: fit-content;
+    top: 81px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .menuToggle .fa-bars.active,
+  .menuToggle .fa-xmark.active {
+    display: block;
+  }
+
+  .menuToggle .fa-bars.nonActive,
+  .menuToggle .fa-xmark.nonActive {
+    display: none;
+  }
+
+  .menuToggle .fa-xmark {
+    font-size: 28px;
+  }
+  /* Responsive nav End here */
+
+  /* Responsive banner Start here */
+  .banner {
+    padding: 1rem 1.65rem;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .hiBannerText {
+    font-size: 16px;
+  }
+
+  .bannerUsername {
+    font-size: 27px;
+  }
+
+  .waveHand {
+    display: none;
+  }
+
+  .bannerTypeWrittingEffect {
+    font-size: 16px;
+  }
+
+  .bannerPicture {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .bannerButtons > a {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 14px 24px;
+    background-color: #1e293b;
+    color: white;
+    border-radius: 9999px;
+  }
+
+  /* Responsive banner End here */
+
+  /* Responsive projects Start here */
+  .projects {
+    padding: 5rem 1rem;
+  }
+
+  .projectsList {
+    gap: 1.5rem;
+  }
+
+  .projects h2 {
+    font-size: 24px;
+    max-width: 200px;
+  }
+
+  .project {
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+
+  .projectPictureMobile {
+    display: block;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .projectPicture {
+    display: none;
+  }
+
+  .projectPicture.orderEnd,
+  .projectPictureMobile.orderEnd {
+    order: -1;
+  }
+
+  .projectTitle {
+    font-size: 22px;
+  }
+
+  .projectDescription {
+    font-size: 16px;
+  }
+  /* Responsive projects End here */
+
+  /* Responsive about start here */
+
+  .about {
+    align-items: flex-start;
+    padding: 4rem 2.5rem;
+  }
+
+  .aboutContent {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* Responsive about end here */
+
+  /* Responsive contact start here */
+
+  .contact {
+    padding: 4rem 1rem;
+  }
+
+  .contactContent {
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  /* Responsive contact end here */
+}
+/* Responsive web design end here */

@@ -18,6 +18,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Link to javascript -->
+    <script src="js/script.js" defer></script>
     <title>Portfolio Project</title>
   </head>
   <body id="home">
@@ -56,11 +58,18 @@
           Aljufri
         </h1>
         <span class="bannerTypeWrittingEffect"
-          ><span id="text"></span><span class="blinkingCursor">|</span></span
+          ><span id="text">Learning the Odin P</span
+          ><span class="blinkingCursor">|</span></span
         >
         <div class="bannerButtons">
-          <a href="#projects">See My Projects</a>
-          <a href="#contact">Contact me</a>
+          <a href="https://medium.com/@muhammad01317">
+            <i class="fa-brands fa-medium"></i>
+            Medium
+          </a>
+          <a href="https://github.com/MuhammadJufri">
+            <i class="fa-brands fa-github"></i>
+            Github
+          </a>
         </div>
       </div>
       <img
@@ -78,21 +87,50 @@
       <div class="projectsList">
         <div class="project">
           <img
-            src="images/projects/project1.png"
+            src="images/projects/mediumSize/recipes.png"
             class="projectPicture"
             alt="project1"
           />
+          <div class="projectInfo">
+            <h3 class="projectTitle">Recipes</h3>
+            <p class="projectDescription">
+              This is my first project with The Odin Project. This is a recipes
+              project that will give the ingredients and how to make it.
+            </p>
+            <ul class="projectTechnologies">
+              <li>
+                <span>HTML5</span>
+              </li>
+            </ul>
+            <div class="projectButtons">
+              <a
+                href="https://muhammadjufri.github.io/odin-recipes"
+                class="projectButton"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                See Live
+              </a>
+              <a
+                href="https://github.com/MuhammadJufri/odin-recipes"
+                class="projectButton"
+              >
+                <i class="fa-brands fa-github"></i>
+                Github Repo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
           <img
-            src="images/projects/mobileScreen/project1.png"
-            class="projectPictureMobile"
-            alt="project1"
+            src="images/projects/mediumSize/ladingPage.png"
+            class="projectPicture"
+            alt="project2"
           />
           <div class="projectInfo">
             <h3 class="projectTitle">Landing Page</h3>
             <p class="projectDescription">
               This is my second project with completely responsive web design on
-              The Odin Project. On this project, I demonstrate my HTML5, CSS3
-              and JavaScript DOM skills.
+              The Odin Project
             </p>
             <ul class="projectTechnologies">
               <li>
@@ -128,19 +166,15 @@
         </div>
         <div class="project">
           <img
-            src="images/projects/project2.png"
+            src="images/projects/mediumSize/rockPaperSicssors.png"
             class="projectPicture orderEnd"
-            alt="project2"
-          />
-          <img
-            src="images/projects/mobileScreen/project2.png"
-            class="projectPictureMobile orderEnd"
-            alt="project2"
+            alt="project3"
           />
           <div class="projectInfo">
             <h3 class="projectTitle">Rock Paper Scissors</h3>
             <p class="projectDescription">
-              This project I created using HTML and JavaScript DOM
+              This is my first game project on the Odin Project, I created using
+              HTML and JavaScript DOM
             </p>
             <ul class="projectTechnologies">
               <li>
@@ -173,14 +207,9 @@
         </div>
         <div class="project">
           <img
-            src="images/projects/project3.png"
+            src="images/projects/mediumSize/etch-a-sketch.png"
             class="projectPicture"
-            alt="project3"
-          />
-          <img
-            src="images/projects/mobileScreen/project3.png"
-            class="projectPictureMobile"
-            alt="project3"
+            alt="project4"
           />
           <div class="projectInfo">
             <h3 class="projectTitle">Etch a Sketch</h3>
@@ -251,7 +280,7 @@
             <br />
             If you interested in my skills please do not hesitate to contact me.
           </p>
-          <a href="resume.pdf" download class="aboutButton" id="resume"
+          <a href="resume.pdf" download="" class="aboutButton" id="resume"
             >See my Resume</a
           >
         </div>
@@ -279,7 +308,5 @@
       </div>
     </section>
     <!-- End contact section here -->
-    <!-- Link to javascript -->
-    <script src="js/script.js"></script>
   </body>
 </html>

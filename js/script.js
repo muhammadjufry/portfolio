@@ -1,4 +1,4 @@
-// Add functionality to navbar menu toggle and nav menu list start here
+/* Add functionality to navbar menu toggle and nav menu list start here */
 const menuToggleBar = document.querySelector('.fa-bars');
 const menuToggleClose = document.querySelector('.fa-xmark');
 const navMenuLists = document.querySelector('nav ul');
@@ -30,6 +30,7 @@ navLists.forEach((navLink) => {
       behavior: 'smooth',
     });
     e.preventDefault();
+    document.body.classList.toggle('scrollOff');
     menuToggleBar.classList.remove('nonActive');
     menuToggleBar.classList.add('active');
     menuToggleClose.classList.remove('active');

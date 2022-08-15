@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  transition: all 0.2s ease;
 }
 
 html {
@@ -14,6 +13,19 @@ html {
 
 body.scrollOff {
   overflow-y: hidden;
+}
+
+article,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
 }
 
 a {
@@ -28,15 +40,15 @@ ul {
 /* Design navbar start here */
 
 nav {
-  display: flex;
   position: fixed;
-  width: 100%;
-  height: fit-content;
-  z-index: 99;
   top: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3.5rem;
+  height: fit-content;
+  padding: 1.5rem calc(100vw - 93vw);
   background-color: rgba(230, 230, 230, 0.5);
   box-shadow: 0 3px 30px rgb(0 0 0 / 10%);
   backdrop-filter: blur(16px);
@@ -63,7 +75,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 25px;
-  color: rgb(71, 85, 105);
+  color: rgb(68, 74, 83);
   font-weight: 500;
   font-size: 14.5px;
 }
@@ -81,7 +93,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 5rem 5rem;
+  padding: 5rem calc(100vw - 93vw) 7rem;
   margin-top: 81px;
 }
 
@@ -158,6 +170,9 @@ ul {
 }
 
 .bannerButtons > a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   line-height: 1.5rem;
   font-weight: 400;
   font-size: 1rem;
@@ -169,9 +184,10 @@ ul {
 
 /* Design the profile picture */
 .bannerPicture {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+  max-width: 270px;
+  max-height: 270px;
 }
 
 /* Design the banner section end here */
@@ -184,6 +200,7 @@ ul {
   gap: 2rem;
   padding: 5rem 3.5rem;
   color: #0f127a;
+  border-top: 3px solid rgba(0, 0, 0, 0.4);
 }
 
 /* Design the projects title */
@@ -199,6 +216,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1.5rem;
   gap: 5rem;
   margin-top: 2rem;
 }
@@ -206,8 +224,7 @@ ul {
 /* Design the project card */
 .project {
   display: flex;
-  align-items: center;
-  padding: 4rem 2rem;
+  padding: 2.5rem 2rem;
   width: 100%;
   max-width: 1290px;
   height: 100%;
@@ -219,20 +236,9 @@ ul {
 
 /* Design the project card image */
 .projectPicture {
-  width: 500px;
-  height: 350px;
+  width: 45%;
+  height: 45%;
   border-radius: 0.75rem;
-}
-
-.projectPictureMobile {
-  display: none;
-  width: 100% auto;
-  height: 100% auto;
-  border-radius: 0.75rem;
-}
-
-.projectPicture.orderEnd {
-  order: 1;
 }
 
 /* Design project info */
@@ -414,6 +420,11 @@ ul {
   letter-spacing: 1.25px;
 }
 
+.contactForm textarea {
+  min-width: 500px;
+  max-width: 500px;
+}
+
 /* Design the contact form button */
 .contactForm button {
   width: fit-content;
@@ -458,7 +469,7 @@ ul {
     align-items: flex-start;
     width: 100%;
     height: fit-content;
-    top: 81px;
+    top: 80px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -491,7 +502,7 @@ ul {
 
   /* Responsive banner Start here */
   .banner {
-    padding: 1rem 1.65rem;
+    padding: 1.5rem;
     flex-direction: column-reverse;
     align-items: flex-start;
   }
@@ -512,11 +523,6 @@ ul {
     font-size: 16px;
   }
 
-  .bannerPicture {
-    width: 50%;
-    margin-bottom: 20px;
-  }
-
   .bannerButtons > a {
     font-weight: 400;
     font-size: 14px;
@@ -526,14 +532,23 @@ ul {
     border-radius: 9999px;
   }
 
+  .bannerPicture {
+    margin-bottom: 20px;
+  }
+
+  .bannerProfilePicture {
+    width: 75%;
+  }
+
   /* Responsive banner End here */
 
   /* Responsive projects Start here */
   .projects {
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
   }
 
   .projectsList {
+    padding: 0;
     gap: 1.5rem;
   }
 
@@ -546,19 +561,9 @@ ul {
     padding: 3rem 1rem;
     flex-direction: column;
   }
-
-  .projectPictureMobile {
-    display: block;
-    border: 5px solid rgba(0, 0, 0, 0.1);
-  }
-
   .projectPicture {
-    display: none;
-  }
-
-  .projectPicture.orderEnd,
-  .projectPictureMobile.orderEnd {
-    order: -1;
+    width: 100%;
+    height: 100%;
   }
 
   .projectTitle {
@@ -587,12 +592,17 @@ ul {
   /* Responsive contact start here */
 
   .contact {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
   }
 
   .contactContent {
     align-items: flex-start;
     max-width: 100%;
+  }
+
+  .contactForm textarea {
+    min-width: 516px;
+    max-width: 516px;
   }
 
   /* Responsive contact end here */

@@ -421,7 +421,7 @@ ul {
 }
 
 .contactForm textarea {
-  min-width: 500px;
+  min-width: 100%;
   max-width: 500px;
 }
 
@@ -601,7 +601,6 @@ ul {
   }
 
   .contactForm textarea {
-    min-width: 516px;
     max-width: 516px;
   }
 

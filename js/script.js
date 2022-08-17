@@ -1,25 +1,28 @@
 /* Add functionality to navbar menu toggle and nav menu list start here */
-const menuToggleBar = document.querySelector('.fa-bars');
-const menuToggleClose = document.querySelector('.fa-xmark');
+const menuToggle = document.querySelector('.menuToggle');
+const menuToggleBar = document.querySelector('.bars');
+const menuToggleClose = document.querySelector('.cross');
 const navMenuLists = document.querySelector('nav ul');
 const navLists = document.querySelectorAll('nav ul li a');
 
-menuToggleBar.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
   document.body.classList.toggle('scrollOff');
-  menuToggleBar.classList.toggle('nonActive');
-  menuToggleClose.classList.remove('nonActive');
-  menuToggleClose.classList.add('active');
-  navMenuLists.classList.add('active');
+  menuToggleBar.classList.toggle('active');
+  menuToggleClose.classList.toggle('active');
+  navMenuLists.classList.toggle('active');
+  navMenuLists.classList.toggle('mobileScreen');
 });
 
-menuToggleClose.addEventListener('click', () => {
-  document.body.classList.toggle('scrollOff');
-  menuToggleBar.classList.remove('nonActive');
-  menuToggleBar.classList.add('active');
-  menuToggleClose.classList.remove('active');
-  menuToggleClose.classList.add('nonActive');
-  navMenuLists.classList.remove('active');
-});
+setInterval(() => {
+  if (window.innerWidth > 992) {
+    document.body.classList.remove('scrollOff');
+  } else if (
+    window.innerWidth < 992 &&
+    navMenuLists.classList.value.split(' ').includes('active')
+  ) {
+    document.body.classList.add('scrollOff');
+  }
+}, 0);
 
 navLists.forEach((navLink) => {
   navLink.addEventListener('click', (e) => {
@@ -30,12 +33,13 @@ navLists.forEach((navLink) => {
       behavior: 'smooth',
     });
     e.preventDefault();
+    if (!navMenuLists.classList.value.split(' ').includes('mobileScreen')) {
+      return;
+    }
     document.body.classList.toggle('scrollOff');
-    menuToggleBar.classList.remove('nonActive');
-    menuToggleBar.classList.add('active');
-    menuToggleClose.classList.remove('active');
-    menuToggleClose.classList.add('nonActive');
-    navMenuLists.classList.remove('active');
+    menuToggleBar.classList.toggle('active');
+    menuToggleClose.classList.toggle('active');
+    navMenuLists.classList.toggle('active');
   });
 });
 

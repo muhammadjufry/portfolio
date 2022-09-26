@@ -286,7 +286,6 @@ main {
 .about h2 {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 2.25rem;
 }
 
 /* Design about content */
@@ -530,9 +529,8 @@ main {
 
   /* Responsive about start here */
 
-  .about {
-    align-items: flex-start;
-    padding: 4rem 2.5rem;
+  .about h2 {
+    text-align: center;
   }
 
   .aboutContent {

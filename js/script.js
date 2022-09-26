@@ -4,13 +4,13 @@ const menuToggleBar = document.querySelector('.bars');
 const menuToggleClose = document.querySelector('.cross');
 const navMenuLists = document.querySelector('nav ul');
 const navLists = document.querySelectorAll('nav ul li a');
+const goTop = document.querySelector('.goTop');
 
 menuToggle.addEventListener('click', () => {
   document.body.classList.toggle('scrollOff');
   menuToggleBar.classList.toggle('active');
   menuToggleClose.classList.toggle('active');
   navMenuLists.classList.toggle('active');
-  navMenuLists.classList.toggle('mobileScreen');
 });
 
 setInterval(() => {
@@ -32,14 +32,11 @@ navLists.forEach((navLink) => {
       top: elementDestination.offsetTop - 180,
       behavior: 'smooth',
     });
+    document.body.classList.remove('scrollOff');
+    menuToggleBar.classList.add('active');
+    menuToggleClose.classList.remove('active');
+    navMenuLists.classList.remove('active');
     e.preventDefault();
-    if (!navMenuLists.classList.value.split(' ').includes('mobileScreen')) {
-      return;
-    }
-    document.body.classList.toggle('scrollOff');
-    menuToggleBar.classList.toggle('active');
-    menuToggleClose.classList.toggle('active');
-    navMenuLists.classList.toggle('active');
   });
 });
 

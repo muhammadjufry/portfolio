@@ -1,8 +1,18 @@
+:root {
+  --portfolio-padding: 0 45px;
+  --white-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(0, 11, 35);
+  overflow-x: hidden;
 }
 
 body.scrollOff {
@@ -25,28 +35,27 @@ nav {
   top: 0;
   width: 100%;
   z-index: 9;
+  padding: 2rem 0;
+  background-color: #000b2366;
+  backdrop-filter: blur(30px);
+}
+
+.nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem calc(100vw - 93vw);
-  background-color: rgba(230, 230, 230, 0.5);
-  backdrop-filter: blur(16px);
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 45px;
 }
 
 /* Design Logo */
 .logo {
   font-weight: 800;
-  font-size: 22px;
-  text-shadow: 4px 6px 10px rgb(0 0 0 / 30%);
-  letter-spacing: 1.25px;
-  background: linear-gradient(
-    to right,
-    rgba(107, 105, 105, 0.79) 0%,
-    #1f083cbf 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 23px;
+  color: #fff;
+  letter-spacing: 1.05px;
 }
 
 /* Design the menu list */
@@ -54,9 +63,9 @@ ul {
   display: flex;
   align-items: center;
   gap: 25px;
-  color: rgb(68, 74, 83);
+  color: #fff;
   font-weight: 500;
-  font-size: 14.5px;
+  font-size: 15px;
 }
 
 /* Hide the menu toggle */
@@ -66,21 +75,29 @@ ul {
 
 /* Design navbar end here */
 
+/* Design main start here */
+main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 97px auto 0;
+  padding: 0 45px;
+}
+/* Design main end here */
+
 /* Design the banner section start here */
 
 .banner {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 5rem calc(100vw - 93vw) 7rem;
-  margin-top: 81px;
+  padding: 6rem 0 9rem;
 }
 
 /* Design banner content */
 .bannerContent {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -88,23 +105,27 @@ ul {
 .hiBannerText {
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 2.25rem;
+  line-height: 1rem;
+  color: #fff;
 }
 
 /* Design the username of the banner section */
 .bannerUsername {
-  font-weight: 600;
-  font-size: 2.25rem;
-  color: #0f127a;
-  line-height: 1.625;
+  font-weight: 700;
+  font-size: 50px;
+  color: #fff;
+  line-height: 1.4;
 }
 
 /* Design the first content of the banner username */
 .bannerUsername > .usernameContentOne {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: flex-end;
+  gap: 1.3rem;
+}
+
+.bannerUsername .usernameContentOne .waveHandEmoji {
+  font-size: 57px;
 }
 
 /* Design banner typing write effect */
@@ -112,6 +133,7 @@ ul {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 2.25rem;
+  color: #fff;
 }
 
 .blinkingCursor {
@@ -155,17 +177,21 @@ ul {
   gap: 0.7rem;
   line-height: 1.5rem;
   font-weight: 400;
-  color: #1e293b;
   transition: all 0.5s ease;
 }
 
 .bannerLinks > a:hover {
-  transform: scale(1.3);
+  transform: scale(1.15);
 }
 
 .bannerLinks > a > img {
   width: 28px;
   height: 28px;
+  filter: invert(1);
+}
+
+.bannerLinks > a[aria-label='email'] > img {
+  transform: scale(1.3);
 }
 
 /* Design the profile picture */
@@ -173,123 +199,77 @@ ul {
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 240px;
-  max-height: 240px;
+  max-width: 320px;
+  max-height: 320px;
+  border-bottom-left-radius: 70px;
+  margin-right: 30px;
 }
 
 /* Design the banner section end here */
 
-/* Design projects section start here */
 .projects {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 5rem 4.5rem;
-  color: #0f127a;
-  border-top: 3px solid rgba(0, 0, 0, 0.4);
-}
-
-/* Design the projects title */
-.projects h2 {
-  text-align: center;
-  font-size: 28px;
-}
-
-/* Design the projects list */
-
-.projectsList {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  margin-top: 2rem;
-}
-
-/* Design the project card */
-.project {
-  display: flex;
-  padding: 2.5rem 2rem;
-  width: 100%;
-  max-width: 1290px;
-  height: 100%;
-  gap: 2rem;
-  border-radius: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 3px 30px rgb(0 0 0 / 20%);
-}
-
-/* Design the project card image */
-.projectPicture {
-  width: 45%;
-  height: 45%;
-  border-radius: 0.75rem;
-}
-
-/* Design project info */
-.projectInfo {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Design the project title */
-.projectTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2.25rem;
-}
-
-/* Design the project description */
-.projectDescription {
-  max-width: 800px;
-  font-size: 1.125rem;
-  line-height: 2.25rem;
-}
-
-/* Design project technologies */
-.projectTechnologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.projectTechnologies > li {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
-/* Design the project buttons */
-.projectButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-top: 1rem;
-}
-
-.projectButton {
-  display: flex;
-  gap: 0.7em;
   align-items: center;
-  border: 2px solid #1e293b;
-  color: #1e293b;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 0.9rem 1.3rem;
+  padding: 4rem 0;
+  gap: 5rem;
 }
 
-.projectButton > img {
-  width: 22px;
-  height: 22px;
+.projects > h2 {
+  font-size: 30px;
+  color: white;
 }
 
-.projectArrowUpRightIcon {
-  transform: scale(0.85);
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 3rem;
+  width: 100%;
+  max-width: 100%;
 }
-/* Design projects section end here */
+
+.project-card {
+  background-color: rgba(0, 11, 35, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  cursor: pointer;
+  border: 1px solid grey;
+  overflow: hidden;
+}
+
+.project-card-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.projectCardInfo {
+  padding: 0 20px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+  color: white;
+}
+
+.projectCardInfoButtons {
+  display: flex;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projectCardInfoButtons > a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+}
 
 /* Design about start here */
 
@@ -298,7 +278,7 @@ ul {
   align-items: center;
   flex-direction: column;
   padding: 4rem 4rem;
-  color: #0f127a;
+  color: white;
   gap: 3rem;
 }
 
@@ -319,7 +299,7 @@ ul {
 
 /* Design about picture */
 .aboutPicture {
-  border-radius: 100%;
+  margin-top: 10px;
 }
 
 /* Design about info */
@@ -337,15 +317,15 @@ ul {
 
 /* Design about info link*/
 .aboutInfoDescLink {
-  color: green;
+  color: rgb(0, 242, 255);
 }
 
 /* Design the about info resume button */
 .aboutButton {
   width: fit-content;
   gap: 1rem;
-  border: 2px solid #1e293b;
-  color: #1e293b;
+  background-color: white;
+  color: black;
   font-weight: 600;
   border-radius: 10px;
   padding: 0.9rem 1.3rem;
@@ -361,7 +341,6 @@ ul {
   justify-content: center;
   padding: 3rem 0;
   margin-top: 3rem;
-  border-top: 3px solid #1e293b;
 }
 
 /* Design the contact content */
@@ -372,7 +351,7 @@ ul {
   gap: 1rem;
   width: 100%;
   max-width: 500px;
-  color: #0f127a;
+  color: white;
 }
 
 /* Design the contact title */
@@ -392,17 +371,17 @@ ul {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1.25px;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* Design the contact form input */
 .contactForm input,
 .contactForm textarea {
   margin-top: 1rem;
-  border: 2px solid #1e293bd3;
+  border: 2px solid #ffffffd3;
   border-radius: 5px;
   padding: 0.5rem;
-  color: #1e293bd3;
+  color: black;
   width: 100%;
   font-weight: 500;
   font-size: 15px;
@@ -418,8 +397,7 @@ ul {
 /* Design the contact form button */
 .contactForm button {
   width: fit-content;
-  background-color: transparent;
-  border: 2px solid #1e293bd3;
+  background-color: #fff;
   font-size: 16px;
   color: #1e293bd3;
   margin-top: 2rem;
@@ -430,18 +408,13 @@ ul {
   transition: all 0.5s ease;
 }
 
-.contactForm button:hover {
-  background-color: #1e293bd3;
-  color: white;
-}
-
 /* Design contact section end here */
 
 /* Responsive web design start here */
 @media screen and (max-width: 992px) {
   /* Responsive nav start here */
-  nav {
-    padding: 1.5rem;
+  .nav-content {
+    padding: 0 25px;
   }
 
   .logo {
@@ -457,7 +430,7 @@ ul {
     padding: 2rem;
     align-items: flex-start;
     width: 100%;
-    top: 77px;
+    top: 94px;
     left: 0;
   }
 
@@ -468,6 +441,10 @@ ul {
   .menuToggle {
     display: block;
     cursor: pointer;
+  }
+
+  .menuToggle img {
+    filter: invert(1);
   }
 
   .menuToggle .bars.active,
@@ -484,11 +461,18 @@ ul {
 
   /* Responsive nav End here */
 
+  /* Responsive Main start here */
+  main {
+    padding: 0 25px;
+  }
+  /* Responsive Main end here */
+
   /* Responsive banner Start here */
   .banner {
-    padding: 1.5rem;
+    padding: 3rem 0 6rem;
     flex-direction: column-reverse;
     align-items: flex-start;
+    gap: 2rem;
   }
 
   .hiBannerText {
@@ -499,7 +483,7 @@ ul {
     font-size: 27px;
   }
 
-  .waveHand {
+  .waveHandEmoji {
     display: none;
   }
 
@@ -508,42 +492,40 @@ ul {
   }
 
   .bannerPicture {
-    margin-bottom: 20px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 70px;
+    width: 85%;
   }
 
   /* Responsive banner End here */
 
   /* Responsive projects Start here */
-  .projects {
-    padding: 5rem 2rem;
-  }
 
-  .projectsList {
-    padding: 0;
-    gap: 1.5rem;
-  }
-
-  .projects h2 {
-    font-size: 24px;
-    max-width: 200px;
-  }
-
-  .project {
-    padding: 3rem 1rem;
+  .projects-list {
+    display: flex;
     flex-direction: column;
-  }
-  .projectPicture {
+    gap: 4rem 0;
     width: 100%;
-    height: 100%;
   }
 
-  .projectTitle {
+  .project-card {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .projectCardInfo h2 {
     font-size: 22px;
   }
 
-  .projectDescription {
-    font-size: 16px;
+  .projectCardInfo p {
+    font-size: 14px;
   }
+
+  .projectCardInfoButtons a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
   /* Responsive projects End here */
 
   /* Responsive about start here */

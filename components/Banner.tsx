@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -16,78 +17,99 @@ export default function Banner({}: Props) {
   return (
     <section className="banner">
       <div className="bannerContent">
-        <span className="hiBannerText animate__animated animate__fadeInTopLeft">
-          Hi, My name is
-        </span>
-        <h1 className="bannerUsername animate__animated animate__fadeInTopLeft">
+        <span className="hiBannerText">Hi, There my name is</span>
+        <h1 className="bannerUsername">
           <span className="usernameContentOne">
-            Muhammad
+            Sayyid
             <span className="waveHandEmoji">👋</span>
           </span>
-          Aljufri
+          Muhammad
         </h1>
-        <span className="bannerTypeWrittingEffect animate__animated animate__fadeInTopLeft">
+        <span className="bannerTypeWrittingEffect">
           <span className="text">{text}</span>
           <Cursor cursorColor="#fff" />
         </span>
-        <div className="bannerLinks animate__animated animate__fadeInLeftBig">
+        <div className="bannerLinks">
           <a
             href="https://medium.com/@muhammad01317"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="/images/icons/medium.svg"
-              alt="mediumIcon"
-              width="28"
-              height="28"
-            />
+            <div style={{ display: 'block', width: '28px', height: '28px' }}>
+              <Image
+                src="/images/icons/medium.svg"
+                alt="mediumIcon"
+                width={28}
+                height={28}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
           </a>
           <a
             href="https://github.com/MuhammadJufri"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="/images/icons/github.svg"
-              alt="githubIcon"
-              width="28"
-              height="28"
-            />
+            <div style={{ display: 'block', width: '28px', height: '28px' }}>
+              <Image
+                src="/images/icons/github.svg"
+                alt="githubIcon"
+                width={28}
+                height={28}
+                objectFit="cover"
+                layout="responsive"
+              />
+            </div>
           </a>
           <a
             href="https://www.linkedin.com/in/muhammad-jufri-ba1ba1237/"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="/images/icons/linkedin.svg"
-              alt="linkedinIcon"
-              width="28"
-              height="28"
-            />
+            <div style={{ display: 'block', width: '28px', height: '28px' }}>
+              <Image
+                src="/images/icons/linkedin.svg"
+                alt="linkedinIcon"
+                width={28}
+                height={28}
+                layout="responsive"
+              />
+            </div>
           </a>
           <a
             href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRtsNLWHLmBbRkwFHDdmMbRkzPPSLbhnSNmzrDKklkPcXWKpGGDLbWgJGbgHDBDcdXgjzql"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src="/images/icons/email.svg"
-              alt="email"
-              width="36"
-              height="36"
-            />
+            <div style={{ display: 'block', width: '36px', height: '36px' }}>
+              <Image
+                src="/images/icons/email.svg"
+                alt="email"
+                width={36}
+                height={36}
+                layout="responsive"
+              />
+            </div>
           </a>
         </div>
       </div>
-      <img
-        src="/images/profile.webp"
-        width="320"
-        height="320"
-        className="bannerPicture animate__animated animate__bounceInRight"
-        alt="profilePicture"
-      />
+      <div
+        style={{
+          width: '360px',
+          height: '360px',
+          display: 'block',
+        }}
+      >
+        <Image
+          src="/images/profile.webp"
+          width="360"
+          height="360"
+          layout="responsive"
+          className="bannerPicture"
+          alt="profilePicture"
+        />
+      </div>
     </section>
   );
 }

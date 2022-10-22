@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  background-color: rgb(0, 11, 35);
   overflow-x: hidden;
 }
 
@@ -42,8 +41,13 @@ nav {
   width: 100%;
   z-index: 9;
   padding: 2rem 0;
-  background-color: #000b2366;
+  background-color: rgba(200, 200, 200, 0.4);
   backdrop-filter: blur(30px);
+}
+
+[data-theme='dark'] nav {
+  background-color: rgb(0, 0, 0, 0.4);
+  color: white;
 }
 
 .nav-content {
@@ -60,8 +64,12 @@ nav {
 .logo {
   font-weight: 800;
   font-size: 23px;
-  color: #fff;
-  letter-spacing: 1.05px;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 /* Design the menu list */
@@ -69,14 +77,40 @@ ul {
   display: flex;
   align-items: center;
   gap: 25px;
-  color: #fff;
   font-weight: 500;
   font-size: 15px;
 }
 
+[data-theme='dark'] ul {
+  color: white;
+}
+
+.themeModeButton {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: black;
+  transition: all 0.5s ease;
+  border: none;
+}
+
+.themeModeButton svg {
+  fill: white;
+}
+
+[data-theme='dark'] .themeModeButton {
+  filter: invert(1);
+}
 /* Hide the menu toggle */
 .menuToggle {
   display: none;
+}
+
+[data-theme='dark'] .menuToggle {
+  filter: invert(1);
 }
 
 /* Design navbar end here */
@@ -107,19 +141,23 @@ main {
   width: 100%;
 }
 
+[data-theme='dark'] .bannerContent {
+  filter: invert(1);
+}
+
 /* Design hi banner text */
 .hiBannerText {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1rem;
-  color: #fff;
+  color: #000;
 }
 
 /* Design the username of the banner section */
 .bannerUsername {
   font-weight: 700;
   font-size: 50px;
-  color: #fff;
+  color: #000;
   line-height: 1.4;
 }
 
@@ -134,12 +172,16 @@ main {
   font-size: 57px;
 }
 
+[data-theme='dark'] .bannerUsername .usernameContentOne .waveHandEmoji {
+  filter: invert(1);
+}
+
 /* Design banner typing write effect */
 .bannerTypeWrittingEffect {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 2.25rem;
-  color: #fff;
+  color: #000;
 }
 
 /* Design banner buttons */
@@ -164,10 +206,9 @@ main {
   transform: scale(1.15);
 }
 
-.bannerLinks > a > img {
+.bannerLinks > a > span > img {
   width: 28px;
   height: 28px;
-  filter: invert(1);
 }
 
 .bannerLinks > a > img[alt='email'] {
@@ -177,9 +218,8 @@ main {
 
 /* Design the profile picture */
 .bannerPicture {
-  max-width: 320px;
+  max-width: 300px;
   margin-right: 30px;
-  border-bottom-left-radius: 70px;
 }
 
 /* Design the banner section end here */
@@ -195,7 +235,6 @@ main {
 
 .projects > h2 {
   font-size: 30px;
-  color: white;
 }
 
 .projects-list {
@@ -207,7 +246,6 @@ main {
 }
 
 .project-card {
-  background-color: rgba(0, 11, 35, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   display: flex;
@@ -229,7 +267,6 @@ main {
   flex-direction: column;
   height: 100%;
   gap: 1rem;
-  color: white;
 }
 
 .projectCardInfoButtons {
@@ -239,10 +276,14 @@ main {
   gap: 1rem;
 }
 
+[data-theme='dark'] .projectCardInfoButtons {
+  filter: invert(1);
+}
+
 .projectCardInfoButtons > a {
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 10px 20px;
   border-radius: 0.5rem;
 }
@@ -254,7 +295,6 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 4rem 4rem;
-  color: white;
   gap: 3rem;
 }
 
@@ -300,8 +340,8 @@ main {
 .aboutButton {
   width: fit-content;
   gap: 1rem;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   font-weight: 600;
   border-radius: 10px;
   padding: 0.9rem 1.3rem;
@@ -327,7 +367,6 @@ main {
   gap: 1rem;
   width: 100%;
   max-width: 500px;
-  color: white;
 }
 
 /* Design the contact title */
@@ -342,6 +381,10 @@ main {
   width: 100%;
 }
 
+[data-theme='dark'] .contactForm {
+  filter: invert(1);
+}
+
 /* Design the contact form label */
 .contactForm label {
   font-weight: 500;
@@ -350,12 +393,17 @@ main {
   margin-top: 2rem;
 }
 
+[data-theme='dark'] .contactForm label {
+  filter: invert(1);
+}
+
 /* Design the contact form input */
 .contactForm input,
 .contactForm textarea {
   margin-top: 1rem;
-  border: 2px solid #ffffffd3;
-  border-radius: 5px;
+  border: 1px solid #303030d3;
+  background-color: white;
+  border-radius: 1px;
   padding: 0.5rem;
   color: black;
   width: 100%;
@@ -373,9 +421,9 @@ main {
 /* Design the contact form button */
 .contactForm button {
   width: fit-content;
-  background-color: #fff;
+  background-color: #000;
   font-size: 16px;
-  color: #1e293bd3;
+  color: #fff;
   margin-top: 2rem;
   font-weight: 600;
   border-radius: 10px;
@@ -414,13 +462,16 @@ main {
     display: flex;
   }
 
+  .themeModeButton {
+    position: fixed;
+    top: 95vh;
+    right: 2rem;
+    translate: 0 -100%;
+  }
+
   .menuToggle {
     display: block;
     cursor: pointer;
-  }
-
-  .menuToggle img {
-    filter: invert(1);
   }
 
   .menuToggle .bars.active,
@@ -431,8 +482,6 @@ main {
   .menuToggle .bars,
   .menuToggle .cross {
     display: none;
-    width: 26px;
-    height: 26px;
   }
 
   /* Responsive nav End here */

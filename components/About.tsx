@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -8,13 +9,23 @@ export default function About({}: Props) {
     <section className="about" id="about">
       <h2>About me</h2>
       <div className="aboutContent">
-        <img
-          src="/images/profile.webp"
-          width="240"
-          height="240"
-          className="aboutPicture"
-          alt="profile"
-        />
+        <div
+          style={{
+            width: '360px',
+            height: '360px',
+            display: 'block',
+          }}
+        >
+          <Image
+            
+            src="/images/profile.webp"
+            width="360"
+            height="360"
+            layout="responsive"
+            className="bannerPicture"
+            alt="profilePicture"
+          />
+        </div>
         <div className="aboutInfo">
           <p className="aboutInfoDesc">
             Hi, I&apos; m a web developer and a web designer, I&apos;ve been

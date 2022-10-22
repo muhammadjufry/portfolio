@@ -67,7 +67,9 @@ export default Home;
 export const getServerSideProps: GetServerSideProps<Props> = async (
   context
 ) => {
-  const res = await fetch('http://localhost:3000/api/projects');
+  const res = await fetch(
+    'https://portfolio-26cytnnfq-muhammadaljufri113-gmailcom.vercel.app/api/projects'
+  );
   const projects = await res.json();
 
   context.res.setHeader(

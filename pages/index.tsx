@@ -68,7 +68,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   context
 ) => {
   const res = await fetch(
-    'https://portfolio-26cytnnfq-muhammadaljufri113-gmailcom.vercel.app/api/projects'
+    'https://portfolio-project-02.netlify.app/api/projects'
   );
   const projects = await res.json();
 

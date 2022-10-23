@@ -78,10 +78,8 @@ export default function Navbar({}: Props) {
             <div
               style={{
                 display: 'block',
-                width: '100%',
-                height: '100%',
-                maxWidth: '30px',
-                maxHeight: '30px',
+                width: '30px',
+                height: '30px',
                 position: 'relative',
               }}
               className={!menuToggle ? 'bars active' : 'bars'}
@@ -91,19 +89,14 @@ export default function Navbar({}: Props) {
                 width={30}
                 height={30}
                 layout="responsive"
-                priority
-                placeholder="blur"
-                blurDataURL="/images/icons/bars.svg"
                 alt="barsIcon"
               />
             </div>
             <div
               style={{
                 display: 'block',
-                width: '100%',
-                height: '100%',
-                maxWidth: '30px',
-                maxHeight: '30px',
+                width: '30px',
+                height: '30px',
                 position: 'relative',
               }}
               className={!menuToggle ? 'cross' : 'cross active'}
@@ -113,9 +106,6 @@ export default function Navbar({}: Props) {
                 width={30}
                 height={30}
                 layout="responsive"
-                priority
-                placeholder="blur"
-                blurDataURL="/images/icons/cross.svg"
                 alt="crossIcon"
               />
             </div>

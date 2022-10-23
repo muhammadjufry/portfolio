@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { projectsData } from '../types';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 const Navbar = dynamic(() => import('./../components/Navbar'));
 const Banner = dynamic(() => import('../components/Banner'));
 const Projects = dynamic(() => import('../components/Projects'));
@@ -64,18 +63,12 @@ const Home = ({ projects }: Props) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const res = await fetch(
     'https://portfolio-project-02.netlify.app/api/projects'
   );
   const projects = await res.json();
 
-  context.res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  );
   return {
     props: {
       projects,

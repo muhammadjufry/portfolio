@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import Image from 'next/image';
 import { projectsData } from '../types';
@@ -28,7 +28,9 @@ export default function Projects({ projects }: Props) {
                     width={438}
                     height={326}
                     layout="responsive"
-                    objectFit="cover"
+                    priority
+                    placeholder="blur"
+                    blurDataURL={project.imageUrl}
                     alt={project.projectName}
                   />
                 </div>

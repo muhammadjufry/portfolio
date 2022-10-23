@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { MoonIcon } from '@heroicons/react/24/solid';
-import { SunIcon } from '@heroicons/react/24/solid';
+import MoonIcon from '@heroicons/react/24/solid/MoonIcon';
+import SunIcon from '@heroicons/react/24/solid/SunIcon';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
@@ -78,6 +78,10 @@ export default function Navbar({}: Props) {
             <div
               style={{
                 display: 'block',
+                width: '100%',
+                height: '100%',
+                maxWidth: '30px',
+                maxHeight: '30px',
                 position: 'relative',
               }}
               className={!menuToggle ? 'bars active' : 'bars'}
@@ -87,12 +91,19 @@ export default function Navbar({}: Props) {
                 width={30}
                 height={30}
                 layout="responsive"
+                priority
+                placeholder="blur"
+                blurDataURL="/images/icons/bars.svg"
                 alt="barsIcon"
               />
             </div>
             <div
               style={{
                 display: 'block',
+                width: '100%',
+                height: '100%',
+                maxWidth: '30px',
+                maxHeight: '30px',
                 position: 'relative',
               }}
               className={!menuToggle ? 'cross' : 'cross active'}
@@ -102,6 +113,9 @@ export default function Navbar({}: Props) {
                 width={30}
                 height={30}
                 layout="responsive"
+                priority
+                placeholder="blur"
+                blurDataURL="/images/icons/cross.svg"
                 alt="crossIcon"
               />
             </div>

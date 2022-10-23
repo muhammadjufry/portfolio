@@ -17,11 +17,13 @@ export default function About({}: Props) {
           }}
         >
           <Image
-            
             src="/images/profile.webp"
             width="360"
             height="360"
             layout="responsive"
+            blurDataURL="/images/profile.webp"
+            priority
+            placeholder="blur"
             className="bannerPicture"
             alt="profilePicture"
           />
@@ -34,15 +36,16 @@ export default function About({}: Props) {
             projects look good and beautiful, I&apos;ve also been learning at
             CSX solving many coding challenges using JavaScript, as well as
             attending the codesmith coding events. Beside that I learn on my own
-            about DOM, and writing an
+            about DOM, and writing an&nbsp;
             <Link
               href="https://medium.com/@muhammad01317/learning-dom-part-1-4632cee58ed6"
               target="_blank"
               className="aboutInfoDescLink"
+              prefetch={false}
             >
               article
             </Link>
-            on Medium.
+            &nbsp;on Medium.
             <br />
             <br />
             If you interested in my skills please do not hesitate to contact me.

@@ -41,7 +41,6 @@ export default function Banner({}: Props) {
                 alt="mediumIcon"
                 width={28}
                 height={28}
-                objectFit="cover"
                 layout="responsive"
               />
             </div>
@@ -57,7 +56,6 @@ export default function Banner({}: Props) {
                 alt="githubIcon"
                 width={28}
                 height={28}
-                objectFit="cover"
                 layout="responsive"
               />
             </div>
@@ -67,7 +65,13 @@ export default function Banner({}: Props) {
             target="_blank"
             rel="noreferrer"
           >
-            <div style={{ display: 'block', width: '28px', height: '28px' }}>
+            <div
+              style={{
+                display: 'block',
+                width: '28px',
+                height: '28px',
+              }}
+            >
               <Image
                 src="/images/icons/linkedin.svg"
                 alt="linkedinIcon"
@@ -82,13 +86,21 @@ export default function Banner({}: Props) {
             target="_blank"
             rel="noreferrer"
           >
-            <div style={{ display: 'block', width: '36px', height: '36px' }}>
+            <div
+              style={{
+                display: 'block',
+                width: '100%',
+                height: '100%',
+                maxWidth: '36px',
+                maxHeight: '36px',
+              }}
+            >
               <Image
                 src="/images/icons/email.svg"
                 alt="email"
                 width={36}
                 height={36}
-                layout="responsive"
+                priority
               />
             </div>
           </a>
@@ -96,8 +108,10 @@ export default function Banner({}: Props) {
       </div>
       <div
         style={{
-          width: '360px',
-          height: '360px',
+          width: '100%',
+          height: '100%',
+          maxWidth: '360px',
+          maxHeight: '360px',
           display: 'block',
         }}
       >
@@ -106,6 +120,9 @@ export default function Banner({}: Props) {
           width="360"
           height="360"
           layout="responsive"
+          priority
+          placeholder="blur"
+          blurDataURL="/images/profile.webp"
           className="bannerPicture"
           alt="profilePicture"
         />

@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-      <Script id="google-tag-manager" strategy="afterInteractive">
+      <Script id="google-tag-manager" strategy="lazyOnload">
         {`
       if(navigator.userAgent.indexOf("Chrome-Lighthouse") == -1) { 
       
@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
        }
       `}
       </Script>
+
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>

@@ -33,8 +33,8 @@ export default function About({}: Props) {
         <div className="aboutInfo">
           <p className="aboutInfoDesc">
             Hi, I&apos;m 12 years old from Indonesia, I&apos;ve 5 years
-            experience as a web developer and also I&apos;ve contribute to open
-            source projects on github on of them is&nbsp;
+            experience as a web developer and also I&apos;ve contributed to open
+            source projects on github. One of them is&nbsp;
             <a
               href="https://github.com/sarvesh4396/freeresourceshub"
               target="_blank"
@@ -42,7 +42,7 @@ export default function About({}: Props) {
             >
               FreeResourceHub
             </a>
-            &nbsp;using React JS and I&apos;ve also been learning at CSX solving
+            &nbsp;using React JS. I&apos;ve also been learning at CSX solving
             many coding challenges using JavaScript to improve my skills, as
             well as attending the codesmith coding events
             <br />

@@ -338,6 +338,10 @@ main {
   color: rgb(16, 105, 189);
 }
 
+[data-theme='dark'] .aboutInfoDesc a {
+  color: orange;
+}
+
 /* Design about info link*/
 .aboutInfoDescLink {
   color: rgb(0, 242, 255);

@@ -46,7 +46,7 @@ export default function Banner({}: Props) {
             </div>
           </a>
           <a
-            href="https://github.com/MuhammadJufri"
+            href="https://github.com/SayyidMuhammad878"
             target="_blank"
             rel="noreferrer"
           >

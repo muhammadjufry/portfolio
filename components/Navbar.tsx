@@ -40,13 +40,13 @@ export default function Navbar({}: Props) {
               <a href="#home">Home</a>
             </li>
             <li onClick={(e) => handleClick(e)}>
-              <a href="#projects">Projects</a>
-            </li>
-            <li onClick={(e) => handleClick(e)}>
               <a href="#about">About</a>
             </li>
             <li onClick={(e) => handleClick(e)}>
               <a href="#resume">Resume</a>
+            </li>
+            <li onClick={(e) => handleClick(e)}>
+              <a href="#projects">Projects</a>
             </li>
             <li onClick={(e) => handleClick(e)}>
               <a href="#contact">Contact</a>

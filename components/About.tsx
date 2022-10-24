@@ -11,15 +11,17 @@ export default function About({}: Props) {
       <div className="aboutContent">
         <div
           style={{
-            width: '360px',
-            height: '360px',
+            width: '100%',
+            height: '100%',
+            maxWidth: '320px',
+            maxHeight: '320px',
             display: 'block',
           }}
         >
           <Image
             src="/images/profile.webp"
-            width="360"
-            height="360"
+            width="320"
+            height="320"
             layout="responsive"
             blurDataURL="/images/profile.webp"
             priority
@@ -30,22 +32,19 @@ export default function About({}: Props) {
         </div>
         <div className="aboutInfo">
           <p className="aboutInfoDesc">
-            Hi, I&apos; m a web developer and a web designer, I&apos;ve been
-            coding using HTML and CSS for about 4 years and I&apos;ve been
-            learning and practicing responsive web design skills to make my
-            projects look good and beautiful, I&apos;ve also been learning at
-            CSX solving many coding challenges using JavaScript, as well as
-            attending the codesmith coding events. Beside that I learn on my own
-            about DOM, and writing an&nbsp;
-            <Link
-              href="https://medium.com/@muhammad01317/learning-dom-part-1-4632cee58ed6"
+            Hi, I&apos;m 12 years old from Indonesia, I&apos;ve 5 years
+            experience as a web developer and also I&apos;ve contribute to open
+            source projects on github on of them is&nbsp;
+            <a
+              href="https://github.com/sarvesh4396/freeresourceshub"
               target="_blank"
-              className="aboutInfoDescLink"
-              prefetch={false}
+              rel="noreferrer"
             >
-              article
-            </Link>
-            &nbsp;on Medium.
+              FreeResourceHub
+            </a>
+            &nbsp;using React JS and I&apos;ve also been learning at CSX solving
+            many coding challenges using JavaScript to improve my skills, as
+            well as attending the codesmith coding events
             <br />
             <br />
             If you interested in my skills please do not hesitate to contact me.

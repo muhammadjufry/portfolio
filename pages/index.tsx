@@ -45,13 +45,13 @@ const Home = ({ projects }: Props) => {
 
         <Banner />
 
-        {/* Projects */}
-
-        <Projects projects={projects} />
-
         {/* About */}
 
         <About />
+
+        {/* Projects */}
+
+        <Projects projects={projects} />
 
         {/* Contact */}
 

@@ -77,7 +77,6 @@ export default function Navbar({}: Props) {
           >
             <div
               style={{
-                display: 'block',
                 width: '30px',
                 height: '30px',
                 position: 'relative',
@@ -94,7 +93,6 @@ export default function Navbar({}: Props) {
             </div>
             <div
               style={{
-                display: 'block',
                 width: '30px',
                 height: '30px',
                 position: 'relative',

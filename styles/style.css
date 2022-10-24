@@ -41,7 +41,8 @@ nav {
   width: 100%;
   z-index: 9;
   padding: 2rem 0;
-  background-color: rgba(200, 200, 200, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 11px 16px -8px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(30px);
 }
 
@@ -294,8 +295,9 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 4rem 4rem;
+  padding: 4rem 0;
   gap: 3rem;
+  border-top: 2px solid rgb(0, 0, 0);
 }
 
 /* Design the about title */
@@ -309,6 +311,7 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
   gap: 3rem;
 }
 
@@ -331,6 +334,10 @@ main {
   max-width: 1000px;
 }
 
+.aboutInfoDesc a {
+  color: rgb(16, 105, 189);
+}
+
 /* Design about info link*/
 .aboutInfoDescLink {
   color: rgb(0, 242, 255);
@@ -343,8 +350,26 @@ main {
   background-color: black;
   color: white;
   font-weight: 600;
-  border-radius: 10px;
   padding: 0.9rem 1.3rem;
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+}
+
+.aboutButton:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+[data-theme='dark'] .aboutButton {
+  background-color: white;
+  color: black;
+}
+
+[data-theme='dark'] .aboutButton:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
 }
 
 /* Design about end here */
@@ -381,20 +406,12 @@ main {
   width: 100%;
 }
 
-[data-theme='dark'] .contactForm {
-  filter: invert(1);
-}
-
 /* Design the contact form label */
 .contactForm label {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1.25px;
   margin-top: 2rem;
-}
-
-[data-theme='dark'] .contactForm label {
-  filter: invert(1);
 }
 
 /* Design the contact form input */
@@ -421,21 +438,31 @@ main {
 /* Design the contact form button */
 .contactForm button {
   width: fit-content;
-  background-color: #000;
+  background-color: black;
   font-size: 16px;
   color: #fff;
   margin-top: 2rem;
   font-weight: 600;
-  border-radius: 10px;
   padding: 0.9rem 1.3rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  border: 2px solid transparent;
+}
+
+.contactForm button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+[data-theme='dark'] .contactForm button {
+  filter: invert(1);
 }
 
 /* Design contact section end here */
 
 /* Responsive web design start here */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   /* Responsive nav start here */
   .nav-content {
     padding: 0 25px;
@@ -533,11 +560,6 @@ main {
     width: 100%;
   }
 
-  .project-card {
-    margin: 0 auto;
-    width: 90%;
-  }
-
   .projectCardInfo h2 {
     font-size: 22px;
   }
@@ -554,6 +576,10 @@ main {
   /* Responsive projects End here */
 
   /* Responsive about start here */
+
+  .about {
+    padding: 4rem 0;
+  }
 
   .about h2 {
     text-align: center;

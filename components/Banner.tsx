@@ -27,7 +27,7 @@ export default function Banner({}: Props) {
         </h1>
         <span className="bannerTypeWrittingEffect">
           <span className="text">{text}</span>
-          <Cursor cursorColor="#fff" />
+          <Cursor />
         </span>
         <div className="bannerLinks">
           <a
@@ -110,15 +110,15 @@ export default function Banner({}: Props) {
         style={{
           width: '100%',
           height: '100%',
-          maxWidth: '360px',
-          maxHeight: '360px',
+          maxWidth: '320px',
+          maxHeight: '320px',
           display: 'block',
         }}
       >
         <Image
           src="/images/profile.webp"
-          width="360"
-          height="360"
+          width="320"
+          height="320"
           layout="responsive"
           priority
           placeholder="blur"

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { projectsData } from '../types';
-import { GetStaticProps } from 'next';
 const Navbar = dynamic(() => import('./../components/Navbar'));
 const Banner = dynamic(() => import('../components/Banner'));
 const Projects = dynamic(() => import('../components/Projects'));
@@ -11,12 +9,7 @@ const Contact = dynamic(() => import('../components/Contact'));
 export const config = {
   unstable_runtimeJS: true,
 };
-
-type Props = {
-  projects: projectsData[];
-};
-
-const Home = ({ projects }: Props) => {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -50,8 +43,7 @@ const Home = ({ projects }: Props) => {
         <About />
 
         {/* Projects */}
-
-        <Projects projects={projects} />
+        <Projects />
 
         {/* Contact */}
 
@@ -59,20 +51,4 @@ const Home = ({ projects }: Props) => {
       </main>
     </div>
   );
-};
-
-export default Home;
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = await fetch(
-    'https://portfolio-project-02.netlify.app/api/projects'
-  );
-  const projects = await res.json();
-
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 15,
-  };
-};
+}

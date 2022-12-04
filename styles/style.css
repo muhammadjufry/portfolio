@@ -70,7 +70,7 @@ nav {
 .rightSide {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 /* Design the menu list */
@@ -87,14 +87,13 @@ ul {
 }
 
 .themeModeButton {
-  padding: 8px;
+  padding: 6px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   cursor: pointer;
-  background-color: black;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
   border: none;
 }
 
@@ -102,10 +101,6 @@ ul {
   fill: white;
 }
 
-[data-theme='dark'] .themeModeButton {
-  filter: invert(1);
-}
-/* Hide the menu toggle */
 .menuToggle {
   display: none;
 }
@@ -207,7 +202,7 @@ main {
   transform: scale(1.15);
 }
 
-.bannerLinks > a > span > img {
+.bannerLinks > a > img {
   width: 28px;
   height: 28px;
 }
@@ -231,7 +226,18 @@ main {
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
-  gap: 5rem;
+  gap: 2rem;
+}
+
+.fetchProjectsTextLoad,
+.fetchProjectsTextErr {
+  color: rgb(9, 191, 236);
+  text-align: center;
+  font-size: 20px;
+}
+
+.fetchProjectsTextErr {
+  color: red;
 }
 
 .projects > h2 {
@@ -244,6 +250,7 @@ main {
   gap: 3rem;
   width: 100%;
   max-width: 100%;
+  margin-top: 2rem;
 }
 
 .project-card {
@@ -258,6 +265,7 @@ main {
 }
 
 .project-card-img {
+  border-bottom: 1px solid grey;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -296,8 +304,12 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 4rem 0;
-  gap: 3rem;
-  border-top: 2px solid rgb(0, 0, 0);
+  gap: 2rem;
+  border-top: 2px solid black;
+}
+
+[data-theme='dark'] .about {
+  border-top: 2px solid white;
 }
 
 /* Design the about title */
@@ -309,8 +321,8 @@ main {
 /* Design about content */
 .aboutContent {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   gap: 3rem;
 }
@@ -331,7 +343,7 @@ main {
 /* Design about info description */
 .aboutInfoDesc {
   line-height: 2.5rem;
-  max-width: 1000px;
+  text-align: justify;
 }
 
 .aboutInfoDesc a {
@@ -349,6 +361,7 @@ main {
 
 /* Design the about info resume button */
 .aboutButton {
+  display: flex;
   width: fit-content;
   gap: 1rem;
   background-color: black;
@@ -357,6 +370,7 @@ main {
   padding: 0.9rem 1.3rem;
   transition: all 0.5s ease;
   border: 2px solid transparent;
+  align-self: flex-start;
 }
 
 .aboutButton:hover {
@@ -599,12 +613,7 @@ main {
   /* Responsive contact start here */
 
   .contact {
-    padding: 4rem 2rem;
-  }
-
-  .contactContent {
-    align-items: flex-start;
-    max-width: 100%;
+    padding: 4rem 0;
   }
 
   .contactForm textarea {

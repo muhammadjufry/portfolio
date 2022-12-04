@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import MoonIcon from '@heroicons/react/24/solid/MoonIcon';
-import SunIcon from '@heroicons/react/24/solid/SunIcon';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
@@ -55,19 +53,21 @@ export default function Navbar({}: Props) {
           <div className="darkMode">
             {!mounted ? null : currentTheme === 'dark' ? (
               <button className="themeModeButton">
-                <SunIcon
-                  width={28}
-                  height={28}
+                <span
+                  style={{ fontSize: '20px' }}
                   onClick={() => setTheme('light')}
-                />
+                >
+                  🌞
+                </span>
               </button>
             ) : (
               <button className="themeModeButton">
-                <MoonIcon
-                  width={28}
-                  height={28}
+                <span
+                  style={{ fontSize: '20px' }}
                   onClick={() => setTheme('dark')}
-                />
+                >
+                  🌙
+                </span>
               </button>
             )}
           </div>

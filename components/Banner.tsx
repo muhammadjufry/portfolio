@@ -35,98 +35,58 @@ export default function Banner({}: Props) {
             target="_blank"
             rel="noreferrer"
           >
-            <div style={{ display: 'block', width: '28px', height: '28px' }}>
-              <Image
-                src="/images/icons/medium.svg"
-                alt="mediumIcon"
-                width={28}
-                height={28}
-                layout="responsive"
-              />
-            </div>
+            <Image
+              src="/images/icons/medium.svg"
+              alt="mediumIcon"
+              width={28}
+              height={28}
+            />
           </a>
           <a
             href="https://github.com/SayyidMuhammad878"
             target="_blank"
             rel="noreferrer"
           >
-            <div style={{ display: 'block', width: '28px', height: '28px' }}>
-              <Image
-                src="/images/icons/github.svg"
-                alt="githubIcon"
-                width={28}
-                height={28}
-                layout="responsive"
-              />
-            </div>
+            <Image
+              src="/images/icons/github.svg"
+              alt="githubIcon"
+              width={28}
+              height={28}
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/muhammad-jufri-ba1ba1237/"
             target="_blank"
             rel="noreferrer"
           >
-            <div
-              style={{
-                display: 'block',
-                width: '28px',
-                height: '28px',
-              }}
-            >
-              <Image
-                src="/images/icons/linkedin.svg"
-                alt="linkedinIcon"
-                width={28}
-                height={28}
-                layout="responsive"
-              />
-            </div>
+            <Image
+              src="/images/icons/linkedin.svg"
+              alt="linkedinIcon"
+              width={28}
+              height={28}
+            />
           </a>
           <a
             href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRtsNLWHLmBbRkwFHDdmMbRkzPPSLbhnSNmzrDKklkPcXWKpGGDLbWgJGbgHDBDcdXgjzql"
             target="_blank"
             rel="noreferrer"
           >
-            <div
-              style={{
-                display: 'block',
-                width: '100%',
-                height: '100%',
-                maxWidth: '36px',
-                maxHeight: '36px',
-              }}
-            >
-              <Image
-                src="/images/icons/email.svg"
-                alt="email"
-                width={36}
-                height={36}
-                priority
-              />
-            </div>
+            <Image
+              src="/images/icons/email.svg"
+              alt="email"
+              width={36}
+              height={36}
+            />
           </a>
         </div>
       </div>
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          maxWidth: '320px',
-          maxHeight: '320px',
-          display: 'block',
-        }}
-      >
-        <Image
-          src="/images/profile.webp"
-          width="320"
-          height="320"
-          layout="responsive"
-          priority
-          placeholder="blur"
-          blurDataURL="/images/profile.webp"
-          className="bannerPicture"
-          alt="profilePicture"
-        />
-      </div>
+      <Image
+        src="/images/profile.webp"
+        width="320"
+        height="320"
+        className="bannerPicture"
+        alt="profilePicture"
+      />
     </section>
   );
 }

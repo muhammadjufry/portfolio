@@ -1,7 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-
 type Props = {};
 
 export default function About({}: Props) {
@@ -9,50 +6,30 @@ export default function About({}: Props) {
     <section className="about" id="about">
       <h2>About me</h2>
       <div className="aboutContent">
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            maxWidth: '320px',
-            maxHeight: '320px',
-            display: 'block',
-          }}
-        >
-          <Image
-            src="/images/profile.webp"
-            width="320"
-            height="320"
-            layout="responsive"
-            blurDataURL="/images/profile.webp"
-            priority
-            placeholder="blur"
-            className="bannerPicture"
-            alt="profilePicture"
-          />
-        </div>
         <div className="aboutInfo">
           <p className="aboutInfoDesc">
-            Hi, I&apos;m 12 years old from Indonesia, I&apos;ve 5 years
-            experience as a web developer and also I&apos;ve contributed to open
-            source projects on github. One of them is&nbsp;
-            <a
-              href="https://github.com/sarvesh4396/freeresourceshub"
-              target="_blank"
-              rel="noreferrer"
-            >
-              FreeResourceHub
+            Hi My Name is Muhammad 👋 I have 5 Years experience in Web Developer
+            role, I&apos;ve contributed to many open source projects on github
+            and also I&apos;ve join the Hacktoberfest competition for open
+            source projects and I&apos;m one of the hacktoberfest winner! Here
+            my <a href="https://holopin.io/@sayyidmuhammad878">badges</a> that I
+            got it from HacktoberFest. And also please check it out one of my
+            big project on github which is
+            <a href="https://github.com/SayyidMuhammadA/Job-Searcher-Extension">
+              &nbsp;Job-Searcher-Extension&nbsp;
             </a>
-            &nbsp;using React JS. I&apos;ve also been learning at CSX solving
-            many coding challenges using JavaScript to improve my skills, as
-            well as attending the codesmith coding events
-            <br />
-            <br />
+            I created this project with my own idea but it haven&apos;t
+            completed so there is no live for this project but i&apos;ve
+            complete around 50% and also this project will help developers to
+            find job more accurately than other websites!
+          </p>
+          <p>
             If you interested in my skills please do not hesitate to contact me.
           </p>
-          <a href="/resume.pdf" className="aboutButton" id="resume" download>
-            See my Resume
-          </a>
         </div>
+        <a href="/resume.pdf" className="aboutButton" id="resume" download>
+          See my Resume
+        </a>
       </div>
     </section>
   );

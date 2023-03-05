@@ -1707,10 +1707,10 @@ react-parallax-tilt@^1.7.67:
   resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.72.tgz#9aaad589c0c45eb044a22d2cc456e7c38cde0fbc"
   integrity sha512-g5pUWIXGaC4YX4b6funNdZmhnrXjCGV08+++B83CN0kFta0OXiBC6mwDfaO8aLnfY265LWPzOaXo6iGFG7tW2g==
 
-react-simple-typewriter@^4.0.2:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-4.0.5.tgz#404a1e12ccb97ad7813b48f8e58813117fe8e3fb"
-  integrity sha512-2CmVpD1kTifRE8gixr2z+1aYS136ZbAC/UATNzvkzl4tSiThT/ATXH4rOGVwWLTlOWCVnSewObXo/kJlV2HMxw==
+react-simple-typewriter@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-5.0.1.tgz#cfdb896c868a55ed4d5f1f06d62b3a9d0f5ad9d7"
+  integrity sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==
 
 react@^18.2.0:
   version "18.2.0"

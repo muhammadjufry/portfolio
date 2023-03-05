@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "18.11.10",
-    "@types/react": "18.0.21",
+    "@types/react": "18.0.28",
     "eslint": "8.24.0",
     "eslint-config-next": "13.0.5",
     "turbo": "^1.6.3",

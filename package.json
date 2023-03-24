@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.67",
     "react-simple-typewriter": "^5.0.0",
-    "sharp": "^0.31.1",
+    "sharp": "^0.32.0",
     "swr": "^2.0.0"
   },
   "devDependencies": {

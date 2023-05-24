@@ -1,0 +1,25 @@
+.projects {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #d3d3d3;
+}
+
+.projectLists {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 855px) {
+  .projectLists {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mantine-1p3no9p.mantine-Image-image {
+    height: 100% !important;
+  }
+}
+@media (max-width: 550px) {
+  .projectLists {
+    grid-template-columns: 1fr;
+  }
+}

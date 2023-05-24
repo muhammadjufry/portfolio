@@ -1,0 +1,22 @@
+.opensourceprojects {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #d3d3d3;
+}
+
+.opensourceprojectsLists {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 855px) {
+  .opensourceprojectsLists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .opensourceprojectsLists {
+    grid-template-columns: 1fr;
+  }
+}

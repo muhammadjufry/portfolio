@@ -21,11 +21,12 @@ function Hero({}: Props) {
             Technical Engineer at Grabtern | Full Stack web developer
           </span>
           <p>
-            I am a full stack web developer i have more than 6 years experience
-            in coding as well creating many projects and open source to many
-            projects on github, and i have worked at two companies, the first
-            one is Amupedia as Front end Developer and the second is Grabtern as
-            Technical engineer, Open to new opportunity and challenges
+            Impact-oriented Full Stack developer in creating many frontend
+            projects using various technology and also helping people to fix
+            their projects using HTML5, CSS, JavaScript and AngularJS and also I
+            have been worked at Amupedia as Web developer designing the frontend
+            system complete from end to end with completely responsive web
+            design and fast perfomance
           </p>
           <ul className="socialLinks">
             <li>

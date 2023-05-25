@@ -91,12 +91,12 @@ export default function ProjectCard({
       </Card.Section>
 
       <Group mt="xs">
-        <Button radius="md">
-          <a href={projectLiveLink}>See Live</a>
-        </Button>
-        <Button radius="md">
-          <a href={projectRepoLink}>See Repo</a>
-        </Button>
+        <a href={projectLiveLink}>
+          <Button radius="md">See Live</Button>
+        </a>
+        <a href={projectRepoLink}>
+          <Button radius="md">See Repo</Button>
+        </a>
       </Group>
     </Card>
   );

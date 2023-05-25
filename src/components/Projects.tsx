@@ -23,13 +23,15 @@ function Projects({}: Props) {
               image={MaStoreImg}
               title="MA STORE"
               oText="( 75% on progress )"
-              description="An E-commerce where you buy and sell from another online shop like amazon, ebay, flipkart, etc"
+              description="An E-commerce where you buy and sell from another online shop like amazon, ebay,
+              flipkart, etc"
               projectSkills={[
-                "Vite",
+                "HTML5",
+                "CSS3",
                 "React.js",
-                "Typescript",
                 "PostgreSQL",
                 "Nodemailer",
+                "RESPONSIVE WEB DESIGN",
               ]}
             />
           </li>
@@ -39,13 +41,16 @@ function Projects({}: Props) {
               projectRepoLink="https://github.com/muhammadjufry/ebay-clone"
               image={EbayImg}
               title="Ebay Clone"
-              description="An crypto currency Ecommerce add and buy product and connect your account by connecting to your Metamask wallet"
+              description="A cryptocurrency Ecommerce where you can add and buy product and connect your
+              account using Metamask extension"
               projectSkills={[
-                "Next.js",
+                "HTML5",
+                "CSS3",
                 "TypeScript",
                 "Thirdweb",
                 "Tailwind CSS",
                 "React.js",
+                "RESPONSIVE WEB DESIGN",
               ]}
             />
           </li>
@@ -55,13 +60,16 @@ function Projects({}: Props) {
               projectRepoLink="https://github.com/muhammadjufry/tic-tac-toe"
               image={TicTacToeImg}
               title="Tic Tac Toe"
-              description="On this game you can play with your friends or against computer with completely responsive web design"
+              description="On this game you can play with your friends or against computer with completely
+              responsive web design"
               projectSkills={[
+                "HTML5",
+                "CSS3",
                 "Typescript",
                 "CSS",
                 "Next.js",
                 "React.js",
-                "Responsive Web Design",
+                "RESPONSIVE WEB DESIGN",
               ]}
             />
           </li>
@@ -71,7 +79,7 @@ function Projects({}: Props) {
               projectRepoLink="https://github.com/muhammadjufry/odin-landingPage"
               image={LandingPageImg}
               title="Landing Page"
-              description="A simple landing page with completely responsive web design which include 5 sections "
+              description="Responsive landing page project that had banner, some information, and some other sections"
               projectSkills={[
                 "HTML5",
                 "CSS3",
@@ -87,7 +95,7 @@ function Projects({}: Props) {
               projectRepoLink="https://github.com/muhammadjufry/Library"
               image={LibraryImg}
               title="Library Book"
-              description="This is a website for user to list their book but it won't save in localstorage it will save in array"
+              description="This is a website for user to list their book but it won't save in localstorage it will save in array type"
               projectSkills={[
                 "HTML5",
                 "CSS3",

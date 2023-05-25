@@ -41,8 +41,7 @@ function Projects({}: Props) {
               projectRepoLink="https://github.com/muhammadjufry/ebay-clone"
               image={EbayImg}
               title="Ebay Clone"
-              description="A cryptocurrency Ecommerce where you can add and buy product and connect your
-              account using Metamask extension"
+              description="A cryptocurrency Ecommerce where you can add and buy product using your Metamask account extension"
               projectSkills={[
                 "HTML5",
                 "CSS3",

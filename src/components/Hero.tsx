@@ -18,15 +18,16 @@ function Hero({}: Props) {
         <div className="left">
           <h2>Hi! My name is Muhammad Jufry</h2>
           <span className="headline">
-            Technical Engineer at Grabtern | Full Stack web developer
+            Head of Technical Team at Grabtern | Full Stack web developer
           </span>
           <p>
-            Impact-oriented Full Stack developer in creating many frontend
-            projects using various technology and also helping people to fix
-            their projects using HTML5, CSS, JavaScript and AngularJS and also I
-            have been worked at Amupedia as Web developer designing the frontend
-            system complete from end to end with completely responsive web
-            design and fast perfomance
+            Impact-oriented Full Stack developer in creating many full stack
+            projects using various technology and open source to github to fix
+            their projects using Javascript, Typescript, React.js, Vite.js and
+            more... and also I have been worked at Amupedia as Web developer
+            designing/debugging/fix the frontend & backend system without any
+            errors and with with completely responsive web design and fast
+            perfomance
           </p>
           <ul className="socialLinks">
             <li>

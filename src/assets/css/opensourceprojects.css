@@ -9,6 +9,9 @@
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.opensourceprojectsLists li:last-child div > div:first-child {
+  height: 77.6px;
+}
 
 @media (max-width: 855px) {
   .opensourceprojectsLists {

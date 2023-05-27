@@ -40,9 +40,11 @@ function OpenSourceProjectCard({
   return (
     <Card withBorder radius="md" p="md" className={classes.card}>
       <div style={{ display: "flex", gap: "15px" }}>
-        <Image src={logo} width={50} height={50} fit="contain" radius="xl" />
+        <a href={repoLive}>
+          <Image src={logo} width={50} height={50} fit="contain" radius="xl" />
+        </a>
         <div>
-          <h3>
+          <h3 style={{ color: "#25b2cf" }}>
             <a href={repoLive}>{repoName}</a>
           </h3>
           <Text fz="sm" color="grey" lh={1.7} mt={2}>

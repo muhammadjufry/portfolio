@@ -4,6 +4,7 @@ import "../assets/css/opensourceprojects.css";
 import OpenSourceProjectCard from "./OpenSourceProjectCard";
 import lightdashLogo from "../assets/images/opensource_projects_logo/lightdash.png";
 import amupediaLogo from "../assets/images/opensource_projects_logo/amupedia.png";
+import grabternLogo from "../assets/images/opensource_projects_logo/grabtern.jpg";
 import amplicationLogo from "../assets/images/opensource_projects_logo/amplication.png";
 import freeresourceshubLogo from "../assets/images/opensource_projects_logo/freeresourceshubLogo.png";
 
@@ -25,6 +26,17 @@ function OpenSourceProjects({}: Props) {
               howManyPr="1"
               logo={lightdashLogo}
               prLink="https://github.com/lightdash/lightdash/pull/5028"
+            />
+          </li>
+          <li>
+            <OpenSourceProjectCard
+              repoName="Grabtern"
+              repoDescription="Connecting the mentors and creating a network"
+              repoLink="https://github.com/anmode/grabtern-frontend"
+              repoLive="https://grabtern.com"
+              howManyPr="30"
+              logo={grabternLogo}
+              prLink="https://github.com/anmode/grabtern-frontend/pulls?q=is%3Apr+is%3Aclosed+author%3Amuhammadjufry"
             />
           </li>
           <li>

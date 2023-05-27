@@ -25,9 +25,8 @@ function Hero({}: Props) {
             projects using various technology and open source to github to fix
             their projects using Javascript, Typescript, React.js, Vite.js and
             more... and also I have been worked at Amupedia as Web developer
-            designing/debugging/fix the frontend & backend system without any
-            errors and with with completely responsive web design and fast
-            perfomance
+            designing/debugging/fixing the frontend & backend system without any
+            errors and with completely responsive web design and fast perfomance
           </p>
           <ul className="socialLinks">
             <li>

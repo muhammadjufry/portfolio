@@ -14,7 +14,7 @@ function OpenSourceProjects({}: Props) {
   return (
     <section className="opensourceprojects" id="opensourceprojects">
       <Container mb={30}>
-        <h3>Here some projects that I have open sourced to it:</h3>
+        <h3>Here some projects that I have open source to it:</h3>
         <br />
         <ul className="opensourceprojectsLists">
           <li>

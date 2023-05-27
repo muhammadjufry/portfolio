@@ -13,7 +13,7 @@ function Projects({}: Props) {
   return (
     <section className="projects" id="projects">
       <Container mb={30}>
-        <h3>Here's my some projects that i have created:</h3>
+        <h3>Here's some of my projects that I have created:</h3>
         <br />
         <ul className="projectLists">
           <li>

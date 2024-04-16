@@ -21,7 +21,7 @@ function Hero({}: Props) {
             Building Grabtern | Full Stack web developer
           </span>
           <p>
-            I am a developer with proven projects and open source. e.g{" "}
+            I am a developer with proven projects and open source, e.g.{" "}
             <a className="link" href="https://github.com/lightdash/lightdash">
               Lightdash
             </a>
@@ -39,19 +39,9 @@ function Hero({}: Props) {
             >
               Freeresourceshub
             </a>{" "}
-            Currently I am working at{" "}
-            <a className="link" href="https://grabtern.in/">
-              Grabtern
-            </a>{" "}
-            as a Full stack developer creating the backend and frontend and
-            successfully making over{" "}
-            <a
-              className="link"
-              href="https://github.com/anmode/grabtern-frontend/pulls?q=is%3Apr+is%3Aclosed+author%3Amuhammadjufry"
-            >
-              30 pull requests
-            </a>{" "}
-            on the Grabtern GitHub repo.
+            Currently, I am working as a freelancer. My strengths are in
+            developing backend and frontend, ensuring their security as well as
+            fast response.
           </p>
           <ul className="socialLinks">
             <li>

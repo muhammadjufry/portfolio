@@ -5,19 +5,27 @@ import {
   Group,
   Badge,
   Button,
-  ActionIcon,
   createStyles,
   rem,
 } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
   },
 
   section: {
-    borderBottom: `${rem(1)} solid ${
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
+    paddingBottom: theme.spacing.md,
+  },
+  skillsSection: {
+    height: "100px",
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
     paddingLeft: theme.spacing.md,
@@ -81,23 +89,25 @@ export default function ProjectCard({
         <Text fz="xs">{description}</Text>
       </Card.Section>
 
-      <Card.Section className={classes.section}>
-        <Text mt="md" className={classes.label} c="dimmed">
-          Skills used:
-        </Text>
-        <Group spacing={7} mt={5}>
-          {skills}
-        </Group>
-      </Card.Section>
+      <div className="project-footer">
+        <Card.Section className={classes.skillsSection}>
+          <Text mt="md" className={classes.label} c="dimmed">
+            Skills used:
+          </Text>
+          <Group spacing={7} mt={5}>
+            {skills}
+          </Group>
+        </Card.Section>
 
-      <Group mt="xs">
-        <a href={projectLiveLink}>
-          <Button radius="md">See Live</Button>
-        </a>
-        <a href={projectRepoLink}>
-          <Button radius="md">See Repo</Button>
-        </a>
-      </Group>
+        <Group mt="xs">
+          <a href={projectLiveLink}>
+            <Button radius="md">See Live</Button>
+          </a>
+          <a href={projectRepoLink}>
+            <Button radius="md">See Repo</Button>
+          </a>
+        </Group>
+      </div>
     </Card>
   );
 }

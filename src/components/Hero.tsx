@@ -18,15 +18,40 @@ function Hero({}: Props) {
         <div className="left">
           <h2>Hi! My name is Muhammad Jufry</h2>
           <span className="headline">
-            Head of Technical Team at Grabtern | Full Stack web developer
+            Building Grabtern | Full Stack web developer
           </span>
           <p>
-            Impact-oriented Full Stack developer in creating many full stack
-            projects using various technology and open source to github to fix
-            their projects using Javascript, Typescript, React.js, Vite.js and
-            more... and also I have been worked at Amupedia as Web developer
-            designing/debugging/fixing the frontend & backend system without any
-            errors and with completely responsive web design and fast perfomance
+            I am a developer with proven projects and open source. e.g{" "}
+            <a className="link" href="https://github.com/lightdash/lightdash">
+              Lightdash
+            </a>
+            ,{" "}
+            <a
+              className="link"
+              href="https://github.com/codinasion/program/pulls?q=is%3Apr+is%3Aclosed+author%3Amuhammadjufry"
+            >
+              Codinasion
+            </a>
+            , and{" "}
+            <a
+              className="link"
+              href="https://github.com/sarvesh4396/freeresourceshub/pull/5"
+            >
+              Freeresourceshub
+            </a>{" "}
+            Currently I am working at{" "}
+            <a className="link" href="https://grabtern.in/">
+              Grabtern
+            </a>{" "}
+            as a Full stack developer creating the backend and frontend and
+            successfully making over{" "}
+            <a
+              className="link"
+              href="https://github.com/anmode/grabtern-frontend/pulls?q=is%3Apr+is%3Aclosed+author%3Amuhammadjufry"
+            >
+              30 pull requests
+            </a>{" "}
+            on the Grabtern GitHub repo.
           </p>
           <ul className="socialLinks">
             <li>

@@ -29,3 +29,15 @@ header {
     margin-bottom: 4.75rem;
   }
 }
+
+.link {
+  color: rgb(0, 149, 255);
+}
+
+.projectLists li {
+  height: 100%;
+}
+
+.project-footer {
+  margin-top: auto;
+}
